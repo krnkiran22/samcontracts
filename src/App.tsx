@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 import {
   Brush,
@@ -29,6 +29,20 @@ import nerolacLogo from './assets/nerolac-logo.png';
 import asianPaintsLogo from './assets/asian-paints-logo.png';
 import nipponLogo from './assets/nippon-logo.png';
 import companyLogo from './assets/logo.jpeg';
+
+function LoadingScreen() {
+  return (
+    <div className="fixed inset-0 bg-white dark:bg-gray-900 flex items-center justify-center z-50">
+      <div className="text-center">
+        <img 
+          src={companyLogo} 
+          alt="Sanjaysam Painting Contractors Logo"
+          className="w-64 h-auto mx-auto animate-fade-in"
+        />
+      </div>
+    </div>
+  );
+}
 
 function HomePage() {
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
@@ -210,38 +224,57 @@ function HomePage() {
       <section className="py-20 bg-gray-50 dark:bg-gray-800">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-16 dark:text-white">Why Choose Sanjaysam Contractors?</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
             {[
               {
-                icon: <Brush className="w-8 h-8 text-orange-500" />,
-                title: "User Experience",
-                description: "Skilled painters using top-quality materials for flawless finish"
+                icon: <Home className="w-8 h-8" />,
+                title: "Residential Painting",
+                bgColor: "bg-green-500",
+                hoverColor: "hover:bg-green-600"
               },
               {
-                icon: <Palette className="w-8 h-8 text-orange-500" />,
-                title: "Customized Solutions",
-                description: "Personalized color consultations and expert advice"
+                icon: <Building className="w-8 h-8" />,
+                title: "Commercial Painting",
+                bgColor: "bg-orange-500",
+                hoverColor: "hover:bg-orange-600"
               },
               {
-                icon: <Clock className="w-8 h-8 text-orange-500" />,
-                title: "Timely Service",
-                description: "On-schedule completion without compromising quality"
+                icon: <PaintBucket className="w-8 h-8" />,
+                title: "Floor Coatings",
+                bgColor: "bg-red-500",
+                hoverColor: "hover:bg-red-600"
               },
               {
-                icon: <CheckCircle2 className="w-8 h-8 text-orange-500" />,
-                title: "Under Budget",
-                description: "Premium quality with flexible cost options"
+                icon: <Palette className="w-8 h-8" />,
+                title: "Color Consultation",
+                bgColor: "bg-blue-500",
+                hoverColor: "hover:bg-blue-600"
+              },
+              {
+                icon: <Brush className="w-8 h-8" />,
+                title: "Painter For A Day",
+                bgColor: "bg-purple-500",
+                hoverColor: "hover:bg-purple-600"
+              },
+              {
+                icon: <CheckCircle2 className="w-8 h-8" />,
+                title: "100% Guarantee",
+                bgColor: "bg-yellow-500",
+                hoverColor: "hover:bg-yellow-600"
               }
             ].map((item, index) => (
-              <div key={index} className="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                <div className="mb-4">{item.icon}</div>
-                <h3 className="text-xl font-semibold mb-2 dark:text-white">{item.title}</h3>
-                <p className="text-gray-600 dark:text-gray-300">{item.description}</p>
+              <div key={index} className="flex flex-col items-center text-center">
+                <div className={`rounded-full ${item.bgColor} ${item.hoverColor} p-6 mb-4 transform transition-all duration-300 hover:scale-110 shadow-lg`}>
+                  <div className="text-white">
+                    {item.icon}
+                  </div>
+                </div>
+                <h3 className="text-lg font-semibold mb-2 dark:text-white">{item.title}</h3>
               </div>
             ))}
           </div>
         </div>
-      </section>
+      </section>  
 
       {/* Gallery Section */}
       <section className="py-20 dark:bg-gray-900">
@@ -418,7 +451,7 @@ function HomePage() {
             <div>
               <h3 className="text-xl font-semibold mb-4">Business Hours</h3>
               <p className="mb-2">Monday - Saturday</p>
-              <p className="text-orange-500 font-semibold">9:00 AM - 8:00 PM</p>
+              <p className="text-orange-500 font-semibold">9:00 AM - 6:00 PM</p>
             </div>
           </div>
           <div className="border-t border-gray-800 pt-8 text-center">
@@ -433,6 +466,20 @@ function HomePage() {
 }
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000); // 2 seconds
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return <LoadingScreen />;
+  }
+
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
