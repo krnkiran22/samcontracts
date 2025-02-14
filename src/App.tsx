@@ -92,7 +92,7 @@ function HomePage() {
               <div className="space-y-4 mb-6">
                 <div>
                   <p className="text-gray-600 dark:text-gray-400">Name</p>
-                  <p className="text-xl font-semibold dark:text-white">Shyam</p>
+                  <p className="text-xl font-semibold dark:text-white">Deckdelight</p>
                 </div>
                 <div>
                   <p className="text-gray-600 dark:text-gray-400">Phone</p>
@@ -145,9 +145,9 @@ function HomePage() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl font-bold mb-6 dark:text-white">About Sanjaysam Contractors</h2>
+              <h2 className="text-4xl font-bold mb-6 dark:text-white">About Deck Delight paintings</h2>
               <p className="text-gray-600 dark:text-gray-300 mb-6 text-lg">
-                With over a decade of experience in the painting industry, Sanjaysam Contractors has established itself as a leading name in professional painting services. Our commitment to quality, attention to detail, and customer satisfaction sets us apart in the industry.
+                With over a decade of experience in the painting industry, Deck Delight has established itself as a leading name in professional painting services. Our commitment to quality, attention to detail, and customer satisfaction sets us apart in the industry.
               </p>
               <div className="grid grid-cols-3 gap-6 mb-8">
                 <div className="text-center">
@@ -224,7 +224,7 @@ function HomePage() {
       {/* Why Choose Us */}
       <section className="py-20 bg-gray-50 dark:bg-gray-800">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-16 dark:text-white">Why Choose Sanjaysam Contractors?</h2>
+          <h2 className="text-4xl font-bold text-center mb-16 dark:text-white">Why Choose Deck Delight?</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
             {[
               {
@@ -457,7 +457,7 @@ function HomePage() {
           </div>
           <div className="border-t border-gray-800 pt-8 text-center">
             <p className="text-gray-400">
-              © {new Date().getFullYear()} Sanjaysam Painting Contractors. All rights reserved.
+              © {new Date().getFullYear()} Deck Delight Painting Contractors. All rights reserved.
             </p>
           </div>
         </div>
