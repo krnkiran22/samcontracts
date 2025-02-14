@@ -22,13 +22,14 @@ import {
 import HallGallery from './pages/HallGallery';
 import BedroomGallery from './pages/BedroomGallery';
 import KitchenGallery from './pages/KitchenGallery';
+import bgimage from "./assets/bgimage.jpg"
 
 // Import logos
 import bergerLogo from './assets/berger-logo.png';
 import nerolacLogo from './assets/nerolac-logo.png';
 import asianPaintsLogo from './assets/asian-paints-logo.png';
 import nipponLogo from './assets/nippon-logo.png';
-import companyLogo from './assets/logo.jpeg';
+import companyLogo from './assets/finallogo.png';
 
 function LoadingScreen() {
   return (
@@ -115,10 +116,10 @@ function HomePage() {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: 'url("https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&q=80")',
+            backgroundImage: 'url("src/assets/bgimage.jpg")',
           }}
         >
-          <div className="absolute inset-0 bg-black/50" />
+          <div className="absolute inset-0 bg-black/20" />
         </div>
         <div className="relative max-w-7xl mx-auto px-4 h-full flex items-center">
           <div className="text-white max-w-2xl">
