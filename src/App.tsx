@@ -116,7 +116,7 @@ function HomePage() {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: 'url("src/assets/bgimage.jpg")',
+            backgroundImage:  'url("https://img.freepik.com/premium-vector/boy-painting-walls-house_1055344-1474.jpg")',
           }}
         >
           <div className="absolute inset-0 bg-black/20" />
