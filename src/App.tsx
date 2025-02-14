@@ -116,7 +116,7 @@ function HomePage() {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage:  'url("https://www.shutterstock.com/shutterstock/photos/2081094178/display_1500/stock-photo-rear-view-shot-of-house-painters-painting-a-wall-isolated-on-white-background-2081094178.jpg")',
+            backgroundImage:  'url("https://img.freepik.com/premium-photo/professional-painter-overalls-helmet-painting-light-blue-wall-with-roller-copy-space-mockup_269655-15299.jpg")',
           }}
         >
           <div className="absolute inset-0 bg-black/20" />
