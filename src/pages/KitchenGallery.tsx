@@ -1,6 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
+ 
+import kitchen1 from '../assets/kitchen1.jpeg';
+import kitchen2 from '../assets/kitchen2.jpeg';
+import kitchen3 from '../assets/kitchen3.jpeg';
+import kitchen4 from '../assets/kitchen4.jpeg';
 
 export default function KitchenGallery() {
   return (
@@ -16,22 +21,22 @@ export default function KitchenGallery() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
             {
-              image: "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&q=80",
+              image: kitchen1,
               title: "Modern Kitchen",
               description: "Contemporary design with clean lines"
             },
             {
-              image: "https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&q=80",
+              image: kitchen2,
               title: "Traditional Kitchen",
               description: "Warm and inviting cooking space"
             },
             {
-              image: "https://images.unsplash.com/photo-1556909212-d5b604d0c90d?auto=format&fit=crop&q=80",
+              image: kitchen3,
               title: "Minimalist Kitchen",
               description: "Clean and efficient design"
             },
             {
-              image: "https://images.unsplash.com/photo-1556912173-3bb406ef7e77?auto=format&fit=crop&q=80",
+              image: kitchen4,
               title: "Contemporary Kitchen",
               description: "Modern functionality"
             },

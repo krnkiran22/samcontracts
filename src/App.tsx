@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { FaWhatsapp } from 'react-icons/fa';
 import { Routes, Route, Link } from 'react-router-dom';
 import {
   Brush,
@@ -77,39 +78,47 @@ function HomePage() {
 
       {/* Contact Modal */}
       {isContactModalOpen && (
-        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
-          <div className="bg-white dark:bg-gray-800 rounded-xl p-8 max-w-md w-full relative animate-fade-in">
-            <button
-              onClick={() => setIsContactModalOpen(false)}
-              className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
-            >
-              <X className="w-6 h-6" />
-            </button>
-            <div className="text-center">
-              <Phone className="w-12 h-12 text-orange-500 mx-auto mb-4" />
-              <h3 className="text-2xl font-bold mb-2 dark:text-white">Contact Information</h3>
-              <p className="text-gray-600 dark:text-gray-300 mb-4">Get in touch with us today!</p>
-              <div className="space-y-4 mb-6">
-                <div>
-                  <p className="text-gray-600 dark:text-gray-400">Name</p>
-                  <p className="text-xl font-semibold dark:text-white">Deckdelight</p>
-                </div>
-                <div>
-                  <p className="text-gray-600 dark:text-gray-400">Phone</p>
-                  <p className="text-xl font-semibold dark:text-white">9363615604</p>
-                </div>
-              </div>
-              <button
-                onClick={() => window.location.href = 'tel:9363615604'}
-                className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg text-lg font-semibold transition-colors w-full flex items-center justify-center gap-2"
-              >
-                <Phone className="w-5 h-5" />
-                Get a Quote
-              </button>
-            </div>
+  <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+    <div className="bg-white dark:bg-gray-800 rounded-xl p-8 max-w-md w-full relative animate-fade-in">
+      <button
+        onClick={() => setIsContactModalOpen(false)}
+        className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
+      >
+        <X className="w-6 h-6" />
+      </button>
+      <div className="text-center">
+        <Phone className="w-12 h-12 text-orange-500 mx-auto mb-4" />
+        <h3 className="text-2xl font-bold mb-2 dark:text-white">Contact Information</h3>
+        <p className="text-gray-600 dark:text-gray-300 mb-4">Get in touch with us today!</p>
+        <div className="space-y-4 mb-6">
+          <div>
+            <p className="text-gray-600 dark:text-gray-400">Name</p>
+            <p className="text-xl font-semibold dark:text-white">Deckdelight</p>
+          </div>
+          <div>
+            <p className="text-gray-600 dark:text-gray-400">Phone</p>
+            <p className="text-xl font-semibold dark:text-white">9363615604</p>
           </div>
         </div>
-      )}
+        <button
+          onClick={() => window.location.href = 'tel:9363615604'}
+          className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg text-lg font-semibold transition-colors w-full flex items-center justify-center gap-2 mb-4"
+        >
+          <Phone className="w-5 h-5" />
+          Get a Quote
+        </button>
+        {/* WhatsApp Button */}
+        <button
+  onClick={() => window.open('https://wa.me/9363615604', '_blank')}
+  className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-lg text-lg font-semibold transition-colors w-full flex items-center justify-center gap-2"
+>
+  <FaWhatsapp className="w-5 h-5" />
+  Chat on WhatsApp
+</button>
+      </div>
+    </div>
+  </div>
+)}
 
       {/* Hero Section */}
       <header className="relative h-[600px]">

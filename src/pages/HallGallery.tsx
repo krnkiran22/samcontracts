@@ -1,6 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
+import hall1 from '../assets/hall1.jpeg';
+import hall2 from '../assets/hall2.jpeg';
+import hall3 from '../assets/hall3.jpeg';
+import hall4 from '../assets/hall4.jpeg';
+import hall5 from '../assets/hall5.jpeg';
+import hall6 from '../assets/hall6.jpeg';
 
 export default function HallGallery() {
   return (
@@ -16,32 +22,32 @@ export default function HallGallery() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
             {
-              image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80",
+              image: hall1,
               title: "Modern Living Hall",
               description: "Contemporary design with neutral tones"
             },
             {
-              image: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=80",
+              image: hall2,
               title: "Spacious Family Hall",
               description: "Bright and welcoming atmosphere"
             },
             {
-              image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80",
+              image: hall3,
               title: "Elegant Living Space",
               description: "Sophisticated color palette"
             },
             {
-              image: "https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&q=80",
+              image: hall4,
               title: "Contemporary Living Room",
               description: "Modern and stylish design"
             },
             {
-              image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80",
+              image: hall5,
               title: "Luxury Hall",
               description: "Premium finishes and elegant touches"
             },
             {
-              image: "https://images.unsplash.com/photo-1616486029423-aaa4789e8c9a?auto=format&fit=crop&q=80",
+              image: hall6,
               title: "Minimalist Living Space",
               description: "Clean lines and simple elegance"
             }

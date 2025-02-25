@@ -2,6 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 
+import bedroom1 from '../assets/bedroom1.jpeg';
+import bedroom2 from '../assets/bedroom2.jpeg';
+import bedroom3 from '../assets/bedroom3.jpeg';
+import bedroom4 from '../assets/bedroom4.jpeg';
 
 export default function BedroomGallery() {
   return (
@@ -17,22 +21,22 @@ export default function BedroomGallery() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
             {
-              image: "https://images.unsplash.com/photo-1560185893-a55cbc8c57e8?auto=format&fit=crop&q=80",
+              image: bedroom1,
               title: "Master Bedroom",
               description: "Serene and relaxing atmosphere"
             },
             {
-              image: "https://images.unsplash.com/photo-1560448204-603b3fc33ddc?auto=format&fit=crop&q=80",
+              image: bedroom2,
               title: "Children's Bedroom",
               description: "Playful and vibrant design"
             },
             {
-              image: "https://images.unsplash.com/photo-1560185127-6ed189bf02f4?auto=format&fit=crop&q=80",
+              image: bedroom3,
               title: "Guest Bedroom",
               description: "Comfortable and welcoming space"
             },
             {
-              image: "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&q=80",
+              image: bedroom4,
               title: "Modern Bedroom",
               description: "Contemporary and stylish"
             },
