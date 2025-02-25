@@ -39,16 +39,6 @@ export default function KitchenGallery() {
               image: kitchen4,
               title: "Contemporary Kitchen",
               description: "Modern functionality"
-            },
-            {
-              image: "https://images.unsplash.com/photo-1556912998-c57cc6b63cd7?auto=format&fit=crop&q=80",
-              title: "Luxury Kitchen",
-              description: "Premium appliances and finishes"
-            },
-            {
-              image: "https://images.unsplash.com/photo-1556911261-6bd341186b2f?auto=format&fit=crop&q=80",
-              title: "Elegant Kitchen",
-              description: "Sophisticated and practical"
             }
           ].map((item, index) => (
             <div key={index} className="group relative overflow-hidden rounded-xl shadow-lg">
