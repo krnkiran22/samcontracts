@@ -24,7 +24,10 @@ import HallGallery from './pages/HallGallery';
 import BedroomGallery from './pages/BedroomGallery';
 import KitchenGallery from './pages/KitchenGallery';
 import bgimage from "./assets/bgimage.jpg"
-
+import homeimage1 from "./assets/homeimage1.webp"
+import homeimage2 from "./assets/homeimage2.webp"
+import homeimage3 from "./assets/homeimage3.webp"
+import homeimage4 from "./assets/homeimage4.webp"
 // Import logos
 import bergerLogo from './assets/berger-logo.png';
 import nerolacLogo from './assets/nerolac-logo.png';
@@ -203,24 +206,24 @@ function HomePage() {
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-4">
                 <img 
-                  src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&q=80" 
+                  src={homeimage2} 
                   alt="Painting work" 
                   className="rounded-lg h-48 w-full object-cover"
                 />
                 <img 
-                  src="https://images.unsplash.com/photo-1581141849291-1125c7b692b5?auto=format&fit=crop&q=80" 
+                  src={homeimage3} 
                   alt="Interior painting" 
                   className="rounded-lg h-64 w-full object-cover"
                 />
               </div>
               <div className="space-y-4 pt-8">
                 <img 
-                  src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&q=80" 
+                  src={homeimage1}
                   alt="Exterior painting" 
                   className="rounded-lg h-64 w-full object-cover"
                 />
                 <img 
-                  src="https://images.unsplash.com/photo-1595815771614-ade9d652a65d?auto=format&fit=crop&q=80" 
+                  src={homeimage4}
                   alt="Detail work" 
                   className="rounded-lg h-48 w-full object-cover"
                 />
