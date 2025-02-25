@@ -249,23 +249,23 @@ function HomePage() {
               },
               {
                 icon: <Wallpaper className="w-8 h-8" />,
-                title: "Wallpaper Installation",
-                description: "Expert wallpaper installation and removal"
+                title: "Under budget",
+                description: "Premium quality with flexible cost option"
               },
               {
                 icon: <Droplets className="w-8 h-8" />,
-                title: "Pressure Washing & Damp Proofing",
-                description: "Complete surface cleaning and protection"
+                title: "Timely & Reliable Service",
+                description: "We value your time and always strive to complete projects on schedule without compromising quality."
               },
               {
                 icon: <Palette className="w-8 h-8" />,
-                title: "Color Consultations",
-                description: "Professional color scheme advice"
+                title: "Customized Solutions",
+                description: "We work closely with you to bring your vision to life, offering personalized color consultations and expert advice."
               },
               {
                 icon: <PaintBucket className="w-8 h-8" />,
-                title: "Wood Flooring",
-                description: "Quality wood flooring installation and finishing"
+                title: "User experience",
+                description: "Our skilled painters use top-quality materials and techniques to ensure a flawless finish every time."
               }
             ].map((service, index) => (
               <div key={index} className="bg-white dark:bg-gray-700 p-8 rounded-xl hover:bg-orange-50 dark:hover:bg-gray-600 transition-colors">
