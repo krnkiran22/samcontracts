@@ -113,14 +113,14 @@ function HomePage() {
 
       {/* Hero Section */}
       <header className="relative h-[600px]">
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage:  'url("https://img.freepik.com/premium-photo/professional-painter-overalls-helmet-painting-light-blue-wall-with-roller-copy-space-mockup_269655-15299.jpg")',
-          }}
-        >
-          <div className="absolute inset-0 bg-black/20" />
-        </div>
+      <div 
+      className="absolute inset-0 bg-cover bg-center"
+      style={{
+        backgroundImage: `url(${bgimage})`,
+      }}
+    >
+      <div className="absolute inset-0 bg-black/20" />
+    </div>
         <div className="relative max-w-7xl mx-auto px-4 h-full flex items-center">
           <div className="text-white max-w-2xl">
             <h1 className="text-5xl font-bold mb-6">
@@ -225,55 +225,45 @@ function HomePage() {
       <section className="py-20 bg-gray-50 dark:bg-gray-800">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-16 dark:text-white">Why Choose us?</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+          
+          <div className="max-w-7xl mx-auto px-4">
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
                 icon: <Home className="w-8 h-8" />,
-                title: "Residential Painting",
-                bgColor: "bg-green-500",
-                hoverColor: "hover:bg-green-600"
+                title: "Interior & Exterior Painting",
+                description: "Professional painting services for all surfaces"
               },
               {
-                icon: <Building className="w-8 h-8" />,
-                title: "Commercial Painting",
-                bgColor: "bg-orange-500",
-                hoverColor: "hover:bg-orange-600"
+                icon: <Wallpaper className="w-8 h-8" />,
+                title: "Wallpaper Installation",
+                description: "Expert wallpaper installation and removal"
               },
               {
-                icon: <PaintBucket className="w-8 h-8" />,
-                title: "Floor Coatings",
-                bgColor: "bg-red-500",
-                hoverColor: "hover:bg-red-600"
+                icon: <Droplets className="w-8 h-8" />,
+                title: "Pressure Washing & Damp Proofing",
+                description: "Complete surface cleaning and protection"
               },
               {
                 icon: <Palette className="w-8 h-8" />,
-                title: "Color Consultation",
-                bgColor: "bg-blue-500",
-                hoverColor: "hover:bg-blue-600"
+                title: "Color Consultations",
+                description: "Professional color scheme advice"
               },
               {
-                icon: <Brush className="w-8 h-8" />,
-                title: "Painter For A Day",
-                bgColor: "bg-purple-500",
-                hoverColor: "hover:bg-purple-600"
-              },
-              {
-                icon: <CheckCircle2 className="w-8 h-8" />,
-                title: "100% Guarantee",
-                bgColor: "bg-yellow-500",
-                hoverColor: "hover:bg-yellow-600"
+                icon: <PaintBucket className="w-8 h-8" />,
+                title: "Wood Flooring",
+                description: "Quality wood flooring installation and finishing"
               }
-            ].map((item, index) => (
-              <div key={index} className="flex flex-col items-center text-center">
-                <div className={`rounded-full ${item.bgColor} ${item.hoverColor} p-6 mb-4 transform transition-all duration-300 hover:scale-110 shadow-lg`}>
-                  <div className="text-white">
-                    {item.icon}
-                  </div>
-                </div>
-                <h3 className="text-lg font-semibold mb-2 dark:text-white">{item.title}</h3>
+            ].map((service, index) => (
+              <div key={index} className="bg-white dark:bg-gray-700 p-8 rounded-xl hover:bg-orange-50 dark:hover:bg-gray-600 transition-colors">
+                <div className="mb-4 text-orange-500">{service.icon}</div>
+                <h3 className="text-xl font-semibold mb-2 dark:text-white">{service.title}</h3>
+                <p className="text-gray-600 dark:text-gray-300">{service.description}</p>
               </div>
             ))}
           </div>
+        </div>
         </div>
       </section>  
 
@@ -324,44 +314,56 @@ function HomePage() {
 
       {/* Services */}
       <section className="py-20 bg-gray-50 dark:bg-gray-800">
-        <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-16 dark:text-white">Our Services</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <h2 className="text-4xl font-bold text-center mb-16 dark:text-white">Our Services</h2>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
             {[
               {
                 icon: <Home className="w-8 h-8" />,
-                title: "Interior & Exterior Painting",
-                description: "Professional painting services for all surfaces"
+                title: "Residential Painting",
+                bgColor: "bg-green-500",
+                hoverColor: "hover:bg-green-600"
               },
               {
-                icon: <Wallpaper className="w-8 h-8" />,
-                title: "Wallpaper Installation",
-                description: "Expert wallpaper installation and removal"
-              },
-              {
-                icon: <Droplets className="w-8 h-8" />,
-                title: "Pressure Washing & Damp Proofing",
-                description: "Complete surface cleaning and protection"
-              },
-              {
-                icon: <Palette className="w-8 h-8" />,
-                title: "Color Consultations",
-                description: "Professional color scheme advice"
+                icon: <Building className="w-8 h-8" />,
+                title: "Commercial Painting",
+                bgColor: "bg-orange-500",
+                hoverColor: "hover:bg-orange-600"
               },
               {
                 icon: <PaintBucket className="w-8 h-8" />,
-                title: "Wood Flooring",
-                description: "Quality wood flooring installation and finishing"
+                title: "Floor Coatings",
+                bgColor: "bg-red-500",
+                hoverColor: "hover:bg-red-600"
+              },
+              {
+                icon: <Palette className="w-8 h-8" />,
+                title: "Color Consultation",
+                bgColor: "bg-blue-500",
+                hoverColor: "hover:bg-blue-600"
+              },
+              {
+                icon: <Brush className="w-8 h-8" />,
+                title: "Painter For A Day",
+                bgColor: "bg-purple-500",
+                hoverColor: "hover:bg-purple-600"
+              },
+              {
+                icon: <CheckCircle2 className="w-8 h-8" />,
+                title: "100% Guarantee",
+                bgColor: "bg-yellow-500",
+                hoverColor: "hover:bg-yellow-600"
               }
-            ].map((service, index) => (
-              <div key={index} className="bg-white dark:bg-gray-700 p-8 rounded-xl hover:bg-orange-50 dark:hover:bg-gray-600 transition-colors">
-                <div className="mb-4 text-orange-500">{service.icon}</div>
-                <h3 className="text-xl font-semibold mb-2 dark:text-white">{service.title}</h3>
-                <p className="text-gray-600 dark:text-gray-300">{service.description}</p>
+            ].map((item, index) => (
+              <div key={index} className="flex flex-col items-center text-center">
+                <div className={`rounded-full ${item.bgColor} ${item.hoverColor} p-6 mb-4 transform transition-all duration-300 hover:scale-110 shadow-lg`}>
+                  <div className="text-white">
+                    {item.icon}
+                  </div>
+                </div>
+                <h3 className="text-lg font-semibold mb-2 dark:text-white">{item.title}</h3>
               </div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* Brand Partners */}
