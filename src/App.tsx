@@ -23,6 +23,7 @@ import {
 import HallGallery from './pages/HallGallery';
 import BedroomGallery from './pages/BedroomGallery';
 import KitchenGallery from './pages/KitchenGallery';
+import ServiceSteps from './pages/ServiceSteps';
 import bgimage from "./assets/bgimage.jpg"
 import homeimage1 from "./assets/homeimage1.webp"
 import homeimage2 from "./assets/homeimage2.webp"
@@ -232,11 +233,18 @@ function HomePage() {
           </div>
         </div>
       </section>
+      {/* Service Steps Section */}
+<section className="py-20 bg-gray-50 dark:bg-gray-800">
+  <div className="max-w-7xl mx-auto px-4">
+    <h2 className="text-4xl font-bold text-center mb-16 dark:text-white">Our Process</h2>
+    <ServiceSteps />
+  </div>
+</section>
 
       {/* Why Choose Us */}
       <section className="py-20 bg-gray-50 dark:bg-gray-800">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-16 dark:text-white">Why Choose us?</h2>
+          <h2 className="text-4xl font-bold text-center mb-16 dark:text-white">Why Choose Deck Delight?</h2>
           
           <div className="max-w-7xl mx-auto px-4">
           
