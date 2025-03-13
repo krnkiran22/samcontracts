@@ -6,7 +6,7 @@ function ServiceSteps() {
     {
       icon: <Headphones className="w-8 h-8 text-white" />,
       title: 'CALL US',
-      description: 'Call us at 1800 599 3939 and our service team will be there for a free site inspection at your convenience.'
+      description: 'Call us at 9363615604 and our service team will be there for a free site inspection at your convenience.'
     },
     {
       icon: <Building2 className="w-8 h-8 text-white" />,
